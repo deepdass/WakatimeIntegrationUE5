@@ -1,4 +1,6 @@
-# Wakatime Integration for UE4
+# Wakatime Integration for UE5
+Made it work with UE5 and improved time tracking by introducing more conditions
+
 Simple Unreal Engine plugin for sending Wakatime plugins to an endpoint of choice. Currently only Windows builds, but should work on MacOS if you self-compile on a macbook.
 
 ![Screenshot of installed plugin](scrshot.png)
@@ -9,7 +11,7 @@ Features:
 - Sends last modified asset (Blueprints, Materials, Structs, etc)
 - Added and removed blueprints pushed as `line_additions` and `line_deletions`
 - Hopefully thread safe
-- Might maybe work in UE5, haven't tested
+- works in UE5
 
 
 Installation

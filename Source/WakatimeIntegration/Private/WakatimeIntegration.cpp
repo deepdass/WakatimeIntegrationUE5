@@ -69,9 +69,6 @@ void FWakatimeIntegrationModule::ShutdownModule()
 	}
 
 
-	
-
-	//FKismetEditorUtilities::OnBlueprintCompiled.RemoveAll(this);
 	FCoreUObjectDelegates::OnObjectSaved.RemoveAll(this);
 
 	FTicker::GetCoreTicker().RemoveTicker(TimerHandle);
@@ -139,7 +136,7 @@ void FWakatimeIntegrationModule::OnObjectSaved(UObject* SavedObject)
 FString GetCurrentOSName()
 {
 #if PLATFORM_WINDOWS
-	return TEXT("windows"); // a lot of these are unrealistic, but imagine if you did get UE4 on an xbox live
+	return TEXT("windows"); 
 #elif PLATFORM_XBOXONE
 	return TEXT("xboxone");
 #elif PLATFORM_MAC
@@ -174,7 +171,7 @@ void FWakatimeIntegrationModule::SendHeartbeat()
 		FScopeLock Lock(&DataLock);
 		localDirty = Dirty;
 		if (!localDirty) {
-			return; //don't bother copying anything
+			return; 
 		}
 		localDeleteOperations = DeleteOperations;
 		localSaveOperations = SaveOperations;
@@ -197,7 +194,7 @@ void FWakatimeIntegrationModule::SendHeartbeat()
 	}
 
 	FString Endpoint = Settings->WakatimeEndpoint;
-	if (Endpoint.EndsWith(TEXT("/"))) //remove trailing slash
+	if (Endpoint.EndsWith(TEXT("/"))) 
 	{
 		Endpoint.RemoveAt(Endpoint.Len() - 1);
 	}
@@ -215,7 +212,7 @@ void FWakatimeIntegrationModule::SendHeartbeat()
 
 	FString TargetURL = Endpoint + TEXT("/users/current/heartbeats");
 	FString Body = FString::Printf(
-		TEXT( //language as UnrealEngine because you could be making shaders, doing blueprints, c++, really anything
+		TEXT( 
 			"{\"type\": \"file\", \"time\" : %lld, \"project\": \"%s\", \"entity\": \"%s\", "
 			"\"language\": \"UnrealEngine\", \"plugin\": \"UnrealEngine\", \"is_write\": false, "
 			"\"user_agent\": \"unreal_engine/%s\", \"machine_name_id\": \"%s\", "
@@ -252,7 +249,7 @@ int64 FWakatimeIntegrationModule::GetCurrentTime()
 
 	int64_t seconds_since_epoch = seconds_duration.count();
 
-	return seconds_since_epoch; //why is it so complicated to get a timestamp bruh
+	return seconds_since_epoch; 
 }
 
 void FWakatimeIntegrationModule::OnHttpResponse(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bWasSuccessful)
@@ -281,4 +278,3 @@ void FWakatimeIntegrationModule::OnHttpResponse(FHttpRequestPtr Request, FHttpRe
 
 #undef LOCTEXT_NAMESPACE
 	
-//IMPLEMENT_MODULE(FWakatimeIntegrationModule, WakatimeIntegration);
