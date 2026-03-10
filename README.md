@@ -1,5 +1,5 @@
 # Wakatime Integration for UE5
-Made it work with UE5 and improved time tracking by introducing more conditions
+edits - Made it work with UE5 and improved time tracking by introducing more conditions
 
 Simple Unreal Engine plugin for sending Wakatime plugins to an endpoint of choice. Currently only Windows builds, but should work on MacOS if you self-compile on a macbook.
 
