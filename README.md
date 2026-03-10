@@ -1,5 +1,5 @@
 # Wakatime Integration for UE5
-Made this as i wanted to make a game in Unreal, but I didnt know of a plugin that tracked time accurately and was working, saw this one late - https://github.com/alaotach/WakatimeIntegrationUE5 but was fun making the plugin work and learn something new
+Made this as i wanted to make a game in Unreal, but I didnt know of a plugin that tracked time accurately and was working for UE5, saw this one late - https://github.com/alaotach/WakatimeIntegrationUE5 but was fun making the plugin work and learn something new
 
 edits - Made it work with UE5 and improved time tracking by introducing more conditions
 
