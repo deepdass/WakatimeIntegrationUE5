@@ -1,6 +1,11 @@
 # Wakatime Integration for UE5
-edit - Made this as i wanted to make a game in Unreal, but I didnt know of a plugin that tracked time accurately and was working for UE5, saw this one late - https://github.com/alaotach/WakatimeIntegrationUE5 but was        fun making the plugin work and learn something new. Made it work with UE5 and improved time tracking by introducing more conditions
+Thanks to **ZXMushroom63** for the Original Plugin
+## Why
+Made this as i wanted to make a game in Unreal, but I didnt know of a plugin that tracked time accurately and was working for UE5, but was fun making the plugin work and learn something new.
+## Changes
+Made it work with UE5 and improved time tracking by introducing more conditions
 
+# Original
 Simple Unreal Engine plugin for sending Wakatime plugins to an endpoint of choice. Currently only Windows builds, but should work on MacOS if you self-compile on a macbook.
 
 ![Screenshot of installed plugin](scrshot.png)
